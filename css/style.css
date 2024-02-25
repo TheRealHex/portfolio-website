@@ -9,20 +9,39 @@ body{
 header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 12px;
-  background: white;
+  background: #fafafa;
+  box-shadow: 1px 1px 70px lightgray;
 }
 nav{
   display: flex;
+  /* background: lightgray; */
+  /* height: 24%; */
+  /* width: 80%; */
+  /* margin: 20px auto; */
+  /* align-items: center; */
+  /* border-radius: 18px; */
+  justify-content: space-evenly;
+  /* padding: 8px */
+  /* padding-left: 20px; */
 }
 nav a{
   /* color: #507c5c; */
-  color: #858585;
-  padding: 0 6px 0 6px
+  /* color: #858585; */
+  /* color: white; */
+  color: gray;
+  padding: 0 6px 0 6px;
 }
 nav a, .logo h2, .links a{
   text-decoration: none;
+  cursor: default;
+}
+.link a{
+  font-size: 14px;
+}
+.link a:active(){
+  font-weight: bold;
 }
 .link:hover{
   /* color: #405b4b; */
@@ -35,9 +54,11 @@ nav a, .logo h2, .links a{
   /* color: #507c5c; */
   color: #888;
 }
-.links a img{
-  height: 24px;
-  margin-top: 24;
+a img{
+  padding: 3px;
+  margin-top: 15%;
+  height: 30px;
+  /* margin-top: 24; */
 }
 .links a, nav a{
   margin-right: 2px;
@@ -53,11 +74,7 @@ main{
   flex-wrap: nowrap;
   align-items: center;
   margin: auto;
-}
-aside, .content{
-  padding: 10px;
-  height: 60vh;
-  box-shadow: 30px 30px 20px lightgray;
+  cursor: default;
 }
 aside{
   border-right: 2px solid #ddd;
@@ -70,21 +87,27 @@ aside{
   align-items: center;
   justify-content: space-evenly;
 }
-aside img{
-  max-width: 80%;
+.content{
+  background: #fcfcfc;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+aside, .content{
+  padding: 10px;
+  height: 60vh;
+  box-shadow: 30px 30px 20px lightgray;
+}
+aside > img{
+  max-width: 75%;
   border-radius: 50%;
   padding: 3%;
   box-shadow: 4px 14px 10px lightgray;
 }
 .info{
-  width: max-content;
-  margin: 30px auto;
   color: gray;
 }
-.content{
-  background: #fcfcfc;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+.info h3{
+  text-align: center;
 }
 
 /* fonts */
