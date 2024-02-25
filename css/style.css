@@ -1,0 +1,53 @@
+*{margin: 0;box-sizing: border-box;}
+
+body{
+  font-family: "Raleway";
+  background: whitesmoke;
+}
+
+/* navigation */
+header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+nav{
+  margin: auto;
+  display: flex;
+}
+nav a{
+  color: #507c5c;
+  padding: 0 6px 0 6px
+}
+nav a, .logo h2, .links a{
+  text-decoration: none;
+}
+.link:hover{
+  color: #405b4b;
+  font-weight: bold;
+}
+.link:hover, img:hover{
+    transform: scale(1.35);
+}
+.logo h2{color: #507c5c;}
+.links a img{
+  height: 24px;
+  margin-top: 24;
+}
+.links a, nav a{
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+/* main */
+main{
+}
+
+/* fonts */
+@font-face{
+  font-family: "Raleway";
+  src: url('../assets/fonts/Raleway-Regular.ttf'),
+       url('../assets/fonts/Raleway-Italic.ttf'),
+       url('../assets/fonts/Raleway-Bold.ttf');
+}
