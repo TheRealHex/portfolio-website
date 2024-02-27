@@ -5,76 +5,20 @@ body{
   background: whitesmoke;
 }
 
-/* navigation */
-header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  background: #fafafa;
-  box-shadow: 1px 1px 70px lightgray;
-}
-nav{
-  display: flex;
-  /* background: lightgray; */
-  /* height: 24%; */
-  /* width: 80%; */
-  /* margin: 20px auto; */
-  /* align-items: center; */
-  /* border-radius: 18px; */
-  justify-content: space-evenly;
-  /* padding: 8px */
-  /* padding-left: 20px; */
-}
-nav a{
-  /* color: #507c5c; */
-  /* color: #858585; */
-  /* color: white; */
-  color: gray;
-  padding: 0 6px 0 6px;
-}
-nav a, .logo h2, .links a{
-  text-decoration: none;
-  cursor: default;
-}
-.link a{
-  font-size: 14px;
-}
-.link a:active(){
-  font-weight: bold;
-}
-.link:hover{
-  /* color: #405b4b; */
-  font-weight: bold;
-}
-.link:hover, a img:hover{
-    transform: scale(1.35);
-}
-.logo h2{
-  /* color: #507c5c; */
-  color: #888;
-}
-a img{
-  padding: 3px;
-  margin-top: 15%;
-  height: 30px;
-  /* margin-top: 24; */
-}
-.links a, nav a{
-  margin-right: 2px;
-  margin-left: 2px;
-}
 
 /* main */
 main{
+  /* background: red; */
+  height: 100vh;
+  width: 100%;
   display: flex;
-  padding: 4%;
-  width: 70%;
-  min-height: 93vh;
-  flex-wrap: nowrap;
   align-items: center;
-  margin: auto;
-  cursor: default;
+  justify-content: center;
+}
+.wrapper{
+  display: flex;
+  width: 80%;
+  /* cursor: default; */
 }
 aside{
   border-right: 2px solid #ddd;
@@ -87,14 +31,9 @@ aside{
   align-items: center;
   justify-content: space-evenly;
 }
-.content{
-  background: #fcfcfc;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
 aside, .content{
   padding: 10px;
-  height: 60vh;
+  height: 80vh;
   box-shadow: 30px 30px 20px lightgray;
 }
 aside > img{
@@ -103,11 +42,63 @@ aside > img{
   padding: 3%;
   box-shadow: 4px 14px 10px lightgray;
 }
+/* tab  */
+.tab{
+  align-self: center;
+  margin-bottom: 2em;
+}
+.tabItem{
+  padding: 10px;
+  width: 80px;
+  color: #777;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+.tabItem:active(){
+  color: black;
+}
+.contentWrapper{
+  background: gray;
+  height: 100%;
+}
+
+.content{
+  background: #fcfcfc;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
 .info{
   color: gray;
+  cursor: default;
 }
 .info h3{
   text-align: center;
+  font-size: 14px;
+}
+.content{
+  overflow: hidden;
+  width:70%;
+}
+.tabContent{
+  display: none;
+}
+.tab button{
+  float: left;
+}
+a img:hover{
+    transform: scale(1.35);
+}
+a img{
+  padding: 3px;
+  margin-top: 15%;
+  height: 30px;
 }
 
 /* fonts */
