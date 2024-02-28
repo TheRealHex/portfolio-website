@@ -77,7 +77,6 @@ aside > img {
 
 /* Tab Content */
 .tabContent {
-  display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
@@ -116,7 +115,7 @@ aside > img {
   color: white;
 }
 
-/* Content Wrapper */
+/* tab 1 */
 .contentWrapper {
   display: flex;
 }
@@ -142,12 +141,40 @@ aside > img {
   margin: 1%;
 }
 
+/* tab 2 */
+.cards-wrapper{
+  display: inline-flex;
+}
+.card{
+  margin: 2%;
+  width: 30%;
+  padding: 13px;
+  border-radius: 20px;
+}
+.card:hover{
+  transform: scale(1.2);
+}
+.card img{
+  height: 100px;
+  width: 80%;
+  object-fit: contain;
+}
+.card h3{
+  /* font-weight: bold; */
+  font-size: 16px;
+  color: gray;
+  padding-top: 4px;
+}
+.card > a{
+  text-decoration: none;
+}
+
 /* Links */
-a img:hover {
+.tabContent > a > img:hover {
   transform: scale(1.35);
 }
 
-a img {
+.tabContent > a > img {
   padding: 3px;
   height: 40px;
   border-radius: 10px;
