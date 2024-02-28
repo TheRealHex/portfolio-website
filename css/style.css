@@ -160,13 +160,27 @@ aside > img {
   object-fit: contain;
 }
 .card h3{
-  /* font-weight: bold; */
-  font-size: 16px;
+  font-size: 14px;
   color: gray;
-  padding-top: 4px;
+  margin-top: 6px;
 }
 .card > a{
   text-decoration: none;
+}
+
+/* tab 3 */
+.contact-wrapper{
+  /* background: green; */
+  margin: 10%;
+  height: 40vh;
+}
+.contact-card{
+  margin: 7%;
+}
+.contact-card > a > img{
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 4px 14px 10px lightgray;
 }
 
 /* Links */
