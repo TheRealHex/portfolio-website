@@ -170,9 +170,12 @@ aside > img {
 
 /* tab 3 */
 .contact-wrapper{
-  /* background: green; */
   margin: 10%;
   height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .contact-card{
   margin: 7%;
