@@ -170,8 +170,8 @@ aside > img {
 
 /* tab 3 */
 .contact-wrapper{
-  margin: 6.8%;
-  height: 38vh;
+  /* height: 48vh; */
+  margin: 9em;
   display: flex;
   justify-content: center;
 }
@@ -188,11 +188,27 @@ aside > img {
 .tabContent > a > img:hover {
   transform: scale(1.35);
 }
-
 .tabContent > a > img {
   padding: 3px;
   height: 40px;
   border-radius: 10px;
+}
+
+/* Responsive */
+@media (min-width: 26em) and (max-width: 80em){
+body{background: none;}
+.wrapper{flex-direction: column; width: 100%;box-shadow: none;}
+main{height: max-content;}
+aside{width: 100%;text-align: center;}
+aside>img{max-width: 45%; box-shadow: 2px 10px 2px lightgray; margin-bottom: 16px;}
+aside>div>h3{font-size: 15px;}
+aside>h2{display: none;}
+/* .tabContent{justify-content: space-between;} */
+.info-header{margin-bottom: 5%;}
+.info-stats>img{width: 100%; margin-top: 4%;}
+.content-section{width: 100%; box-shadow: none; background: white;}
+.learnings{display: contents;}
+.contact-wrapper{flex-direction: column;}
 }
 
 /* End of CSS */
