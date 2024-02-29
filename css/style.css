@@ -170,8 +170,8 @@ aside > img {
 
 /* tab 3 */
 .contact-wrapper{
-  /* height: 48vh; */
-  margin: 9em;
+  margin: 11%;
+  height: 38vh;
   display: flex;
   justify-content: center;
 }
@@ -195,7 +195,7 @@ aside > img {
 }
 
 /* Responsive */
-@media (min-width: 26em) and (max-width: 80em){
+@media (min-height: 660px) and (max-width: 1140px), (min-height: 1000px){
 body{background: none;}
 .wrapper{flex-direction: column; width: 100%;box-shadow: none;}
 main{height: max-content;}
