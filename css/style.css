@@ -14,6 +14,17 @@
   --tabText: #888;
   --shadow: lightgray;
 }
+.light-mode{
+  --mainBg: whitesmoke;
+  --contentBg: white;
+  --activeText: white;
+  --activeBg: #bcbcbc;
+  --inactiveBg: #eee;
+  --text: gray;
+  --tabText: #888;
+  --shadow: lightgray;
+  transition: background 1s;
+}
 
 .dark-mode {
   --text: #dfdfdf;
@@ -24,6 +35,7 @@
   --activeText: #dfdfdf;
   --tabText: #ccc;
   --shadow: #0f0f0f;
+  transition: background 1s;
 }
 
 /* Fonts */
