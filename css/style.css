@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+:root {
+  --mainBg: whitesmoke;
+  --contentBg: white;
+  --activeText: white;
+  --activeBg: #bcbcbc;
+  --inactiveBg: #eee;
+  --text: gray;
+  --tabText: #888;
+  --shadow: lightgray;
+}
+
+.dark-mode {
+  --text: #dfdfdf;
+  --mainBg: #1e1e1e;
+  --contentBg: #151515;
+  --activeBg: black;
+  --inactiveBg: #0f0f0f;
+  --activeText: #dfdfdf;
+  --tabText: #ccc;
+  --shadow: #0f0f0f;
+}
+
 /* Fonts */
 @font-face {
   font-family: "Raleway";
@@ -15,7 +37,7 @@
 /* Body */
 body {
   font-family: "Raleway";
-  background: whitesmoke;
+  background: var(--mainBg);
 }
 
 /* Main */
@@ -23,6 +45,7 @@ main {
   height: 100vh;
   width: 100%;
   display: flex;
+  user-select: none;
   align-items: center;
   justify-content: center;
 }
@@ -30,7 +53,7 @@ main {
 .wrapper {
   display: flex;
   width: 80%;
-  box-shadow: 30px 30px 20px lightgray;
+  box-shadow: 30px 30px 20px var(--shadow);
 }
 
 #info {
@@ -39,9 +62,9 @@ main {
 
 /* Aside */
 aside {
-  border-right: 2px solid #ddd;
+  border-right: 2px solid var(--shadow);
   width: 40%;
-  background: white;
+  background: var(--contentBg);
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   display: flex;
@@ -56,11 +79,11 @@ aside>img {
   max-width: 75%;
   border-radius: 50%;
   padding: 3%;
-  box-shadow: 4px 14px 10px lightgray;
+  box-shadow: 4px 14px 10px var(--shadow);
 }
 
 .info {
-  color: gray;
+  color: var(--text);
   cursor: default;
 }
 
@@ -69,13 +92,13 @@ aside>img {
   width: 80%;
   display: flex;
   flex-direction: column;
-  background: #fcfcfc;
+  background: var(--contentBg);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   text-align: center;
   padding: 10px;
   height: 540px;
-  box-shadow: 30px 30px 20px lightgray;
+  box-shadow: 30px 30px 20px var(--shadow);
 }
 
 /* Tab Content */
@@ -93,7 +116,7 @@ aside>img {
 }
 
 .tabContent h1 {
-  color: #666;
+  color: var(--text);
 }
 
 /* Tab */
@@ -104,7 +127,8 @@ aside>img {
 .tabItem {
   padding: 10px;
   width: 80px;
-  color: #777;
+  color: var(--tabText);
+  background: var(--inactiveBg);
   font-weight: bold;
   border: none;
   text-align: center;
@@ -114,8 +138,8 @@ aside>img {
 }
 
 .active {
-  background: #aaa;
-  color: white;
+  background: var(--activeBg);
+  color: var(--activeText);
 }
 
 /* tab 1 */
@@ -125,7 +149,7 @@ aside>img {
 
 .info-header>p {
   font-size: 14px;
-  color: #888;
+  color: var(--text);
   margin-top: 5%;
 }
 
@@ -158,7 +182,7 @@ aside>img {
 }
 
 .card:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .card img {
@@ -169,18 +193,13 @@ aside>img {
 
 .card h3 {
   font-size: 14px;
-  color: gray;
+  color: var(--text);
   margin-top: 6px;
 }
 
 .card>a {
   text-decoration: none;
 }
-
-/* tab 3 */
-/* #interests a img { */
-/*   height: 200px; */
-/* } */
 
 /* tab 4 */
 .contact-wrapper {
@@ -194,10 +213,10 @@ aside>img {
   margin: 30px;
 }
 
-.contact-card>a>img{
+.contact-card>a>img {
   height: 35px;
   border-radius: 20px;
-  box-shadow: 4px 14px 10px lightgray;
+  box-shadow: 4px 14px 10px var(--shadow);
 }
 
 /* Links */
@@ -233,9 +252,14 @@ aside>img {
     text-align: center;
   }
 
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+
   aside>img {
     max-width: 45%;
-    box-shadow: 2px 10px 2px lightgray;
+    box-shadow: 2px 10px 2px var(--shadow);
     margin-bottom: 16px;
   }
 
@@ -260,7 +284,7 @@ aside>img {
   .content-section {
     width: 100%;
     box-shadow: none;
-    background: white;
+    background: var(--contentBg);
   }
 
   .learnings {

@@ -17,3 +17,33 @@ const openTab = (evt, tabName) => {
   document.getElementById(tabName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
+
+// theme toggle
+let isDark = false;
+
+function toggleTheme() {
+  let element = document.body;
+  var r = document.querySelector(':root');
+
+  element.classList.toggle("dark-mode");
+  isDark = !isDark;
+
+  if (isDark) {
+    r.style.setProperty('--mainBg', 'black');
+    updateImageBackgroundColor('151515');
+  } else {
+    r.style.setProperty('--mainBg', 'whitesmoke');
+    updateImageBackgroundColor('fcfcfc');
+  }
+}
+
+function updateImageBackgroundColor(color) {
+  let img = document.querySelector('img[src*="streak-stats.demolab.com"]');
+
+  if (img) {
+    let oldSrc = img.src;
+    let newSrc = oldSrc.replace(/background=[^&]*/, `background=${color}`);
+    img.src = newSrc;
+  }
+}
+// end theme toggle
