@@ -31,9 +31,12 @@ function toggleTheme() {
   if (isDark) {
     r.style.setProperty('--mainBg', 'black');
     updateImageBackgroundColor('151515');
+    invert();
   } else {
     r.style.setProperty('--mainBg', 'whitesmoke');
     updateImageBackgroundColor('fcfcfc');
+    // invert();
+    revert();
   }
 }
 
@@ -45,5 +48,13 @@ function updateImageBackgroundColor(color) {
     let newSrc = oldSrc.replace(/background=[^&]*/, `background=${color}`);
     img.src = newSrc;
   }
+}
+
+function invert() {
+  document.getElementById("image").style.filter = "invert(100%)";
+}
+
+function revert() {
+  document.getElementById("image").style.filter = "invert(0%)";
 }
 // end theme toggle

@@ -14,7 +14,8 @@
   --tabText: #888;
   --shadow: lightgray;
 }
-.light-mode{
+
+.light-mode {
   --mainBg: whitesmoke;
   --contentBg: white;
   --activeText: white;
@@ -23,7 +24,6 @@
   --text: gray;
   --tabText: #888;
   --shadow: lightgray;
-  transition: background 1s;
 }
 
 .dark-mode {
@@ -35,7 +35,6 @@
   --activeText: #dfdfdf;
   --tabText: #ccc;
   --shadow: #0f0f0f;
-  transition: background 1s;
 }
 
 /* Fonts */
@@ -68,9 +67,6 @@ main {
   box-shadow: 30px 30px 20px var(--shadow);
 }
 
-#info {
-  display: flex;
-}
 
 /* Aside */
 aside {
@@ -136,6 +132,17 @@ aside>img {
   margin-bottom: 1em;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo input {
+  margin-left: 10px;
+  height: 28px;
+  width: 28px;
+}
+
 .tabItem {
   padding: 10px;
   width: 80px;
@@ -149,9 +156,9 @@ aside>img {
   margin: 10px;
 }
 
-.themeToggle{
-  width: max-content;
-}
+/* .themeToggle { */
+/* width: max-content; */
+/* } */
 
 .active {
   background: var(--activeBg);
@@ -270,12 +277,6 @@ aside>img {
     border-radius: 0;
   }
 
-  .logo {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
   aside>img {
     max-width: 45%;
     box-shadow: 2px 10px 2px var(--shadow);
@@ -288,6 +289,11 @@ aside>img {
 
   aside>h2 {
     display: none;
+  }
+
+  .logo input {
+    height: 26px;
+    width: 26px;
   }
 
   /* .tabContent{justify-content: space-between;} */
